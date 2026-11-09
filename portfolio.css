@@ -6,7 +6,7 @@
 .portfolio-hero{position:relative;isolation:isolate;height:100svh;min-height:480px;overflow:hidden;background:#191919;color:white;touch-action:pan-y}
 .frames,.frame{position:absolute;inset:0}.frame{overflow:hidden;z-index:0}.frame.is-current{z-index:1}.frame.is-entering{z-index:2}.frame[hidden]{display:none}
 .frame-media,.frame video{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;object-position:center 52%}.frame-media{background:#646464}
-.frame::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#120f0d64,#0d0c0b45 62%,#100e0b60);pointer-events:none}
+.frame::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0d0d0dc9 0%,#0d0d0d66 55%,#0d0d0d4d 100%);pointer-events:none}
 .frame-copy{position:absolute;z-index:1;left:20vw;right:13vw;top:50%;transform:translateY(-46%);max-width:620px}
 .frame-copy h1,.frame-copy h2{font:500 clamp(32px,5vw,66px)/1.08 "Albert Sans",Helvetica,Arial,sans-serif;letter-spacing:0;margin:0;color:white}
 .frame-copy h1::after,.frame-copy h2::after{content:"";display:block;width:clamp(65px,10vw,130px);height:1px;background:#fffc;margin:18px 0 22px}
@@ -34,7 +34,3 @@
 }
 @keyframes hero-in{from{clip-path:inset(0 0 0 100%)}to{clip-path:inset(0)}}
 @keyframes caption-in{from{opacity:0;translate:60px 0}to{opacity:1;translate:0 0}}
-
-.portfolio-hero .frame::after{background:none}
-.portfolio-hero .frame:nth-child(2) .frame-media{filter:brightness(.89)}
-.portfolio-hero .frame:nth-child(3) .frame-media{filter:brightness(1.10)}

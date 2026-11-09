@@ -183,17 +183,11 @@ summary.board-button::-webkit-details-marker { display: none; }
 
 }
 
-.material-slot {
-  display: grid;
-  place-items: center;
-  padding: clamp(12px, 2vw, 28px);
-  background: #333;
-  border: 1px solid #505050;
-  color: #ddd;
-  text-align: center;
-  font: clamp(13px, 1.35vw, 19px)/1.35 "Albert Sans", Arial, sans-serif;
-}
-.project-material { min-height: 0; }
+.about-photo { overflow: hidden; }
+.about-photo img { height: 100%; }
+.project-material { position: relative; display: block; min-height: 0; overflow: hidden; }
+.project-material img { position: absolute; inset: 0; height: 100%; }
+.project-material:focus-visible { outline-offset: -4px; }
 .footer-socials { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 24px; }
 .footer-socials p { color: #bfbfbf; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
 .footer-socials a { font-size: clamp(19px, 2.3vw, 32px); }
