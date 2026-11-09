@@ -1,0 +1,40 @@
+:root{color-scheme:dark;--paper:#191919;--ink:#f4f1eb;--olive:#141414;--line:#41413f;--serif:Helvetica,Arial,sans-serif;font-family:"Albert Sans",Arial,sans-serif;background:#191919;color:var(--ink)}
+.portfolio-header{position:absolute;top:0;inset-inline:0;z-index:4;display:flex;justify-content:space-between;align-items:center;padding:38px 4vw 0 7vw;color:#fff}
+.wordmark{font:600 18px/1 Helvetica,Arial,sans-serif;letter-spacing:.27em}.wordmark span{font-weight:400}
+.menu-toggle,.frame-controls button,.site-menu button{background:none;color:inherit;border:0;cursor:pointer}
+.menu-toggle{display:grid;gap:7px;place-content:center;width:44px;height:34px;padding:0}.menu-toggle span{width:25px;height:2px;background:currentColor}
+.portfolio-hero{position:relative;isolation:isolate;height:100svh;min-height:480px;overflow:hidden;background:#191919;color:white;touch-action:pan-y}
+.frames,.frame{position:absolute;inset:0}.frame{overflow:hidden;z-index:0}.frame.is-current{z-index:1}.frame.is-entering{z-index:2}.frame[hidden]{display:none}
+.frame img,.frame video{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;object-position:center 52%}.frame-blinds img{object-position:center 44%}
+.frame::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#120f0d64,#0d0c0b45 62%,#100e0b60);pointer-events:none}
+.frame-copy{position:absolute;z-index:1;left:20vw;right:13vw;top:50%;transform:translateY(-46%);max-width:620px}
+.frame-copy h1,.frame-copy h2{font:500 clamp(30px,4vw,43px)/1.08 "Albert Sans",Helvetica,Arial,sans-serif;letter-spacing:0;margin:0;color:white}
+.frame-copy h1::after,.frame-copy h2::after{content:"";display:block;width:clamp(65px,10vw,130px);height:1px;background:#fffc;margin:18px 0 22px}
+.frame-copy p{font:300 14px/1.5 "Albert Sans",Arial,sans-serif}
+.frame-controls,.hero-down,.hero-instagram,.frame-count{position:absolute;z-index:3}
+.frame-controls{bottom:5.5%;left:3vw;display:flex;gap:28px}.frame-controls button{padding:10px;width:46px;height:46px}.frame-controls svg,.hero-instagram svg{width:100%;fill:none;stroke:currentColor;stroke-width:1.7}.frame-controls button:hover,.hero-instagram:hover{color:#e2bc93}
+.hero-instagram{bottom:calc(5.5% + 9px);right:4.5vw;width:24px;height:24px}
+.hero-down{bottom:calc(5.5% + 13px);left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.18em;text-transform:uppercase}.hero-down span{margin-left:.45em}
+.frame-count{right:4vw;top:30%;bottom:28%;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:15px;font-size:19px;letter-spacing:.16em}.frame-count span:not(.count-line){writing-mode:vertical-rl;transform:rotate(180deg)}.count-line{flex:1;width:1px;background:#fff7}
+.site-menu{margin:0;inset:0 0 0 auto;height:100%;max-height:none;width:min(100%,520px);max-width:none;border:0;background:#1b1b1b;color:#fff;padding:38px 7vw;overflow:auto}
+.site-menu::backdrop{background:#0009}.site-menu[open]{animation:panel-in .38s cubic-bezier(.22,.61,.36,1) both}
+@keyframes panel-in{from{transform:translateX(100%)}to{transform:none}}
+.site-menu form{text-align:right}.site-menu button{font-size:35px}.site-menu nav{display:grid;gap:0;margin:6vh 0 35px}.site-menu nav a{font:500 clamp(27px,5vw,49px)/1.15 "Albert Sans",Helvetica,Arial,sans-serif;padding:12px 0}.menu-phone{font-size:15px}
+.js-motion .reveal{opacity:0;transform:translateY(36px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.65,.35,1)}
+.js-motion .reveal.is-visible{opacity:1;transform:none}
+@media(max-width:992px){.frame-copy{left:10vw}}
+@media(max-width:580px){
+ .portfolio-header{padding:24px 5vw 0 7vw}.wordmark{font-size:16px}.frame-copy{left:8vw;right:8vw;text-align:center}.frame-copy h1::after,.frame-copy h2::after{margin-inline:auto}.frame-count{right:5vw;top:20%;bottom:24%;font-size:13px}.frame-controls{gap:4px}.hero-instagram{right:7vw}.studio{grid-template-columns:1fr;gap:38px}.studio-images img+img{margin-bottom:-18px}
+}
+@media(prefers-reduced-motion:reduce){.site-menu[open]{animation:none}.js-motion .reveal{transition:none}}
+
+@media(prefers-reduced-motion:no-preference){
+ .portfolio-hero{animation:hero-in .7s ease-out both}
+ .portfolio-hero:not(.has-moved) .frame:first-child.is-current .frame-copy{animation:caption-in .85s .22s cubic-bezier(.22,.61,.36,1) both}
+}
+@keyframes hero-in{from{clip-path:inset(0 0 0 100%)}to{clip-path:inset(0)}}
+@keyframes caption-in{from{opacity:0;translate:60px 0}to{opacity:1;translate:0 0}}
+
+.portfolio-hero .frame::after{background:none}
+.portfolio-hero .frame:nth-child(2) img{filter:brightness(.89)}
+.portfolio-hero .frame:nth-child(3) img{filter:brightness(1.10)}
