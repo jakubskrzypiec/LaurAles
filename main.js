@@ -126,3 +126,18 @@ contactForm.addEventListener('submit', (event) => {
   ].join('\r\n');
   window.location.href = 'mailto:laurales@laurales.pl?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
 });
+
+const offerButtons = Array.from(document.querySelectorAll('.offer-index button'));
+const offerPreview = document.querySelector('.offer-preview');
+const offerNumber = offerPreview.querySelector('.offer-preview-number');
+const offerTitle = offerPreview.querySelector('.offer-preview-title');
+
+offerButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    offerButtons.forEach((option) => option.setAttribute('aria-pressed', String(option === button)));
+    const number = button.querySelector('.offer-number').textContent;
+    offerPreview.dataset.category = number;
+    offerNumber.textContent = number;
+    offerTitle.textContent = button.querySelector('.offer-name').textContent;
+  });
+});
