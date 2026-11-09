@@ -28,16 +28,16 @@
 <section class="portfolio-hero" aria-label="Aranżacja okien LaurAles" aria-roledescription="karuzela">
   <div class="frames">
     <article class="frame is-current">
-      <img src="assets/hero-placeholder.svg" alt="" fetchpriority="high">
-      <div class="frame-copy"><h1>Nagłówek przykładowy</h1><p>Tekst do uzupełnienia</p></div>
+      <div class="frame-media" aria-hidden="true"></div>
+      <div class="frame-copy"><h1>Nagłówek przykładowy</h1><p>Miejsce na zdjęcie lub wideo</p></div>
     </article>
     <article class="frame" hidden>
-      <img src="assets/hero-placeholder.svg" alt="">
-      <div class="frame-copy"><h2>Drugi kadr</h2><p>Tekst do uzupełnienia</p></div>
+      <div class="frame-media" aria-hidden="true"></div>
+      <div class="frame-copy"><h2>Drugi kadr</h2><p>Miejsce na zdjęcie lub wideo</p></div>
     </article>
     <article class="frame frame-blinds" hidden>
-      <img src="assets/hero-placeholder.svg" alt="">
-      <div class="frame-copy"><h2>Trzeci kadr</h2><p>Tekst do uzupełnienia</p></div>
+      <div class="frame-media" aria-hidden="true"></div>
+      <div class="frame-copy"><h2>Trzeci kadr</h2><p>Miejsce na zdjęcie lub wideo</p></div>
     </article>
   </div>
   <div class="frame-count" aria-live="polite"><span id="frame-current">01</span><span class="count-line"></span><span>03</span></div>
@@ -51,7 +51,7 @@
 <div class="studio-board">
   <section id="studio" class="board-wrap board-about" aria-labelledby="about-title">
     <div class="about-heading"><span class="board-index" aria-hidden="true">/01</span><h2 id="about-title">O nas</h2></div>
-    <figure class="about-photo"><img src="assets/ig-wave.jpg" alt="Jasne zasłony Wave w realizacji LaurAles i Potonya Interior" loading="lazy"></figure>
+    <div class="about-photo material-slot">Miejsce na zdjęcie pracowni</div>
     <div class="about-text">
       <p>LaurAles to pracownia aranżacji okien w Warszawie. Projektujemy i montujemy osłony w domach i apartamentach. Tkaniny dobieramy na miejscu, w świetle konkretnego wnętrza.</p>
       <p>Zasłony i firany szyjemy na wymiar. Dobieramy także rolety, plisy, żaluzje i okiennice, a na zewnątrz montujemy markizy, pergole i osłony elewacyjne.</p>
@@ -78,13 +78,13 @@
       <div class="board-heading"><h2 id="projects-title">Realizacje</h2><span class="board-index" aria-hidden="true">/03</span></div>
       <a class="board-button all-projects" href="https://www.instagram.com/laurales.pl/">Wszystkie realizacje <span aria-hidden="true">↗</span></a>
       <figure class="board-project" data-project="01">
-        <a href="https://www.instagram.com/laurales.pl/reel/DaaeAFCoshv/" aria-label="Jadalnia w Zamieniu na Instagramie"><img src="assets/ig-jadalnia.jpg" alt="Jadalnia z brązowymi żaluzjami i jasnymi zasłonami" loading="lazy"></a><figcaption>Jadalnia w Zamieniu</figcaption>
+        <div class="project-material material-slot">Miejsce na zdjęcie realizacji</div><figcaption>Jadalnia w Zamieniu</figcaption>
       </figure>
       <figure class="board-project" data-project="02">
-        <a href="https://www.instagram.com/laurales.pl/p/DVn1SeEiBhr/" aria-label="Salon w beżach na Instagramie"><img src="assets/ig-salon.jpg" alt="Salon z lekkimi firanami i beżowymi zasłonami" loading="lazy"></a><figcaption>Salon w beżach</figcaption>
+        <div class="project-material material-slot">Miejsce na zdjęcie realizacji</div><figcaption>Salon w beżach</figcaption>
       </figure>
       <figure class="board-project" data-project="03">
-        <a href="https://www.instagram.com/laurales.pl/p/DdrdCeakQaI/" aria-label="Pokój kąpielowy na Instagramie"><img src="assets/ig-lazienka.jpg" alt="Wolnostojąca wanna na tle firany i zasłon" loading="lazy"></a><figcaption>Pokój kąpielowy</figcaption>
+        <div class="project-material material-slot">Miejsce na zdjęcie realizacji</div><figcaption>Pokój kąpielowy</figcaption>
       </figure>
     </div>
     <div class="project-nav" aria-label="Sterowanie galerią">
@@ -118,7 +118,7 @@
 </main>
 <footer class="board-wrap site-footer">
   <a class="wordmark" href="#top" aria-label="LaurAles, początek strony">LAUR<span>ALES</span></a>
-  <div><a href="https://www.instagram.com/laurales.pl/">Instagram ↗</a><a href="https://www.facebook.com/LaurAlesAranzacjaOkien">Facebook ↗</a></div>
+  <nav class="footer-socials" aria-label="Media społecznościowe"><p>LaurAles w social mediach</p><a href="https://www.instagram.com/laurales.pl/">Instagram <span aria-hidden="true">↗</span></a><a href="https://www.facebook.com/LaurAlesAranzacjaOkien">Facebook <span aria-hidden="true">↗</span></a></nav>
   <a href="#top">Do góry ↑</a>
 </footer>
 </body>

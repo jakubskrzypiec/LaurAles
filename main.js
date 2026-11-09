@@ -35,7 +35,7 @@ async function moveFrame(direction) {
       { transform: 'translateX(0)' },
       { transform: 'translateX(' + direction * -36 + '%)' }
     ], { duration, easing, fill: 'forwards' });
-    incoming.querySelector('img').animate([
+    incoming.querySelector('.frame-media').animate([
       { transform: 'translateX(' + direction * -28 + '%) scale(1.35)' },
       { transform: 'translateX(0) scale(1)' }
     ], { duration, easing });

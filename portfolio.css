@@ -5,12 +5,12 @@
 .menu-toggle{display:grid;gap:7px;place-content:center;width:44px;height:34px;padding:0}.menu-toggle span{width:25px;height:2px;background:currentColor}
 .portfolio-hero{position:relative;isolation:isolate;height:100svh;min-height:480px;overflow:hidden;background:#191919;color:white;touch-action:pan-y}
 .frames,.frame{position:absolute;inset:0}.frame{overflow:hidden;z-index:0}.frame.is-current{z-index:1}.frame.is-entering{z-index:2}.frame[hidden]{display:none}
-.frame img,.frame video{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;object-position:center 52%}.frame-blinds img{object-position:center 44%}
+.frame-media,.frame video{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;object-position:center 52%}.frame-media{background:#646464}
 .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#120f0d64,#0d0c0b45 62%,#100e0b60);pointer-events:none}
 .frame-copy{position:absolute;z-index:1;left:20vw;right:13vw;top:50%;transform:translateY(-46%);max-width:620px}
-.frame-copy h1,.frame-copy h2{font:500 clamp(30px,4vw,43px)/1.08 "Albert Sans",Helvetica,Arial,sans-serif;letter-spacing:0;margin:0;color:white}
+.frame-copy h1,.frame-copy h2{font:500 clamp(32px,5vw,66px)/1.08 "Albert Sans",Helvetica,Arial,sans-serif;letter-spacing:0;margin:0;color:white}
 .frame-copy h1::after,.frame-copy h2::after{content:"";display:block;width:clamp(65px,10vw,130px);height:1px;background:#fffc;margin:18px 0 22px}
-.frame-copy p{font:300 14px/1.5 "Albert Sans",Arial,sans-serif}
+.frame-copy p{font:300 17px/1.5 "Albert Sans",Arial,sans-serif}
 .frame-controls,.hero-down,.hero-instagram,.frame-count{position:absolute;z-index:3}
 .frame-controls{bottom:5.5%;left:3vw;display:flex;gap:28px}.frame-controls button{padding:10px;width:46px;height:46px}.frame-controls svg,.hero-instagram svg{width:100%;fill:none;stroke:currentColor;stroke-width:1.7}.frame-controls button:hover,.hero-instagram:hover{color:#e2bc93}
 .hero-instagram{bottom:calc(5.5% + 9px);right:4.5vw;width:24px;height:24px}
@@ -36,5 +36,5 @@
 @keyframes caption-in{from{opacity:0;translate:60px 0}to{opacity:1;translate:0 0}}
 
 .portfolio-hero .frame::after{background:none}
-.portfolio-hero .frame:nth-child(2) img{filter:brightness(.89)}
-.portfolio-hero .frame:nth-child(3) img{filter:brightness(1.10)}
+.portfolio-hero .frame:nth-child(2) .frame-media{filter:brightness(.89)}
+.portfolio-hero .frame:nth-child(3) .frame-media{filter:brightness(1.10)}
