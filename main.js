@@ -126,3 +126,24 @@ contactForm.addEventListener('submit', (event) => {
   ].join('\r\n');
   window.location.href = 'mailto:laurales@laurales.pl?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
 });
+
+const projectBoard = document.querySelector('.project-board');
+const projectNav = document.querySelector('.project-nav');
+const projectNumbers = projectNav.querySelector('.project-side-numbers');
+const projectActive = projectNav.querySelector('.project-active-number');
+
+projectNav.querySelectorAll('[data-project-shift]').forEach((button) => {
+  button.addEventListener('click', () => {
+    const projects = Array.from(projectBoard.querySelectorAll('.board-project'));
+    const first = projects[0];
+    const last = projects.at(-1);
+    if (button.dataset.projectShift === '1') {
+      projectBoard.append(first);
+    } else {
+      first.before(last);
+    }
+    const [left, middle, featured] = projectBoard.querySelectorAll('.board-project');
+    projectNumbers.textContent = left.dataset.project + ' ' + middle.dataset.project;
+    projectActive.textContent = featured.dataset.project;
+  });
+});
